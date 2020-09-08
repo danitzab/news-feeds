@@ -17,7 +17,11 @@ export const AppRoutes = () => (
             <div className="container">
               <div className="row">
                 <div className="col-12 text-center">
-                  <img src="https://cdn.dribbble.com/users/1197927/screenshots/8062981/media/498b9f796d031f3c2370130510d63f2f.gif" alt="not-found"/>
+                  <img
+                    src="https://cdn.dribbble.com/users/1197927/screenshots/8062981/media/498b9f796d031f3c2370130510d63f2f.gif"
+                    alt="not-found"
+                  />
+                  <h1>La página no existe</h1>
                 </div>
               </div>
             </div>

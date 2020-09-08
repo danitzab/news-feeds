@@ -1,13 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-
 const Card = ({ news, hasError, isLoading }) => {
   // console.log('Props', news);
   if (hasError) {
+    console.log('entro haserror', hasError);
     return (
-      <div className="container-fluid">
-        <h6>Error de Búsqueda</h6>
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-12 text-center">
+            <img
+              src="https://cdn.dribbble.com/users/1197927/screenshots/8062981/media/498b9f796d031f3c2370130510d63f2f.gif"
+              alt="not-found"
+            />
+            <h1>No se encontrarón resultados</h1>
+          </div>
+        </div>
       </div>
     );
   }
@@ -15,7 +23,7 @@ const Card = ({ news, hasError, isLoading }) => {
   if (isLoading) {
     return (
       <div className="container-fluid">
-        <h6>Loading…</h6>
+        <img src="https://en-coloradosprings.com/wp-content/themes/geocrafttheme-v2/images/ajax_loader.gif" alt="loading" />
       </div>
     );
   }

@@ -13,32 +13,30 @@ export const loadingSuccess = (news) => ({
   news,
 });
 
-export const clearNews = () => ({
-  type: 'CLEAR_NEWS',
-});
-
 export const getNewsBySearch = (word) => {
   console.log('enter word', word);
   return (dispatch) => {
-    dispatch(clearNews());
-
     dispatch(loadingError(false));
 
     dispatch(loadingInProgress(true));
 
     fetch(`https://api.canillitapp.com/search/${word}`)
       .then((response) => {
+        console.log('response search', response);
         if (!response.ok) {
           throw Error(response.statusText);
         }
-
         dispatch(loadingInProgress(false));
 
         return response;
       })
       .then((response) => response.json())
       .then((news) => {
-        dispatch(loadingSuccess(news.slice(0, 10)));
+        if (!news || !news.length) {
+          throw Error(news.statusText);
+        } else {
+          dispatch(loadingSuccess(news.slice(0, 10)));
+        }
       })
       .catch(() => dispatch(loadingError(true)));
   };
@@ -46,8 +44,6 @@ export const getNewsBySearch = (word) => {
 
 export const getNewsByCategory = (category) => {
   return (dispatch) => {
-    dispatch(clearNews());
-
     dispatch(loadingError(false));
 
     dispatch(loadingInProgress(true));
@@ -64,7 +60,11 @@ export const getNewsByCategory = (category) => {
       })
       .then((response) => response.json())
       .then((category) => {
-        dispatch(loadingSuccess(category.slice(0, 10)));
+        if (!category || !category.length) {
+          throw Error(category.statusText);
+        } else {
+          dispatch(loadingSuccess(category.slice(0, 10)));
+        }
       })
       .catch(() => dispatch(loadingError(true)));
   };
@@ -72,8 +72,6 @@ export const getNewsByCategory = (category) => {
 
 export const getNewsByDate = () => {
   return (dispatch) => {
-    dispatch(clearNews());
-
     dispatch(loadingError(false));
 
     dispatch(loadingInProgress(true));
@@ -93,7 +91,11 @@ export const getNewsByDate = () => {
       })
       .then((response) => response.json())
       .then((data) => {
-        dispatch(loadingSuccess(data.slice(0, 10)));
+        if (!data || !data.length) {
+          throw Error(data.statusText);
+        } else {
+          dispatch(loadingSuccess(data.slice(0, 10)));
+        }
       })
       .catch(() => dispatch(loadingError(true)));
   };
