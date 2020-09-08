@@ -1,0 +1,59 @@
+body {
+  padding: 0px;
+}
+.bg-primary {
+  background-color: #f50057 !important;
+}
+
+.btn-primary {
+  background-color: #f50050 !important;
+  border-color: #f50057 !important;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #f50070 !important;
+}
+
+.nav-link.active {
+  border-bottom: solid 2px #f50057;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+/* .has-search .form-control {
+  padding-left: 2.375rem;
+} */
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 22.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.card-img-top {
+  height: 190px;
+}
+
+.navbar {
+  padding: 0.5rem 2rem;
+}
+
+.input-group-append {
+  margin-left: -9px;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  background-color: #fff; 
+  background-clip: padding-box;
+  border: none;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  border-left: none;
+}
