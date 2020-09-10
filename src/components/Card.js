@@ -2,9 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Card = ({ news, hasError, isLoading }) => {
-  // console.log('Props', news);
   if (hasError) {
-    console.log('entro haserror', hasError);
     return (
       <div className="container">
         <div className="row justify-content-center">
@@ -33,7 +31,8 @@ const Card = ({ news, hasError, isLoading }) => {
     <>
       {news.map((report, i) => (
         <div className="col-sm-12 col-md-4 mb-4" key={i}>
-          <div className="card mt-4 h-100 mx-auto " style={{ width: '18rem' }}>
+          <div className="card mt-4 h-100 mx-auto">
+            {/* <div className="card mt-4 h-100 mx-auto " style={{ width: '18rem' }}> */}
             {report.img_url ? (
               <img src={report.img_url} className="card-img-top" alt={i} />
             ) : (

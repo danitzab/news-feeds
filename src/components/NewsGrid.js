@@ -18,11 +18,9 @@ class NewsGrid extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="card-deck justify-content-center">
-          <div className="row">
-            <Card />
-          </div>
+      <div className="card-deck justify-content-center">
+        <div className="row">
+          <Card />
         </div>
       </div>
     );

@@ -17,6 +17,9 @@ body {
 .nav-link.active {
   border-bottom: solid 2px #f50057;
 }
+.collapse:not(.show) {
+  display: contents;
+}
 
 /* Bootstrap 4 text input with search icon */
 
