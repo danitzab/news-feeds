@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getNewsByCategory, getNewsByDate} from '../actions';
+import { getNewsByCategory, getNewsByDate } from '../actions';
 import Card from './Card';
 
-const NewsGrid = ({ id, getNewsByCategory, getNewsByDate }) => {
-  if (id) {
-    getNewsByCategory(id);
-  } else {
-    getNewsByDate();
+class NewsGrid extends Component {
+  componentDidMount() {
+    this.props.getNewsByDate();
   }
 
-  return (
-    <div className="container">
-      <div className="card-deck justify-content-center">
-        <div className="row">
-          <Card />
+  componentDidUpdate() {
+    if (this.props.id) {
+      this.props.getNewsByCategory(this.props.id);
+    } else {
+      this.props.getNewsByDate();
+    }
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <div className="card-deck justify-content-center">
+          <div className="row">
+            <Card />
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 const mapStateToProps = (state, ownProps) => ({
   defaultUser: ownProps.user,
