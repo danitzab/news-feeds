@@ -18,6 +18,7 @@ export const AppRoutes = () => (
               <div className="row">
                 <div className="col-12 text-center">
                   <img
+                    className="img-fluid"
                     src="https://cdn.dribbble.com/users/1197927/screenshots/8062981/media/498b9f796d031f3c2370130510d63f2f.gif"
                     alt="not-found"
                   />
