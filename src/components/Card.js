@@ -14,7 +14,7 @@ const Card = ({ news, hasError, isLoading }) => {
               src="https://cdn.dribbble.com/users/1197927/screenshots/8062981/media/498b9f796d031f3c2370130510d63f2f.gif"
               alt="not-found"
             />
-            <h1>No se encontrarón resultados</h1>
+            <h3 className="mt">No se encontrarón resultados</h3>
           </div>
         </div>
       </div>

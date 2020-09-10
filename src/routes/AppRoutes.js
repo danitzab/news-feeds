@@ -22,7 +22,7 @@ export const AppRoutes = () => (
                     src="https://cdn.dribbble.com/users/1197927/screenshots/8062981/media/498b9f796d031f3c2370130510d63f2f.gif"
                     alt="not-found"
                   />
-                  <h1>La página no existe</h1>
+                  <h3 className="mt">La página no existe</h3>
                 </div>
               </div>
             </div>
