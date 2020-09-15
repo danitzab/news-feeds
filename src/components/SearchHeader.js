@@ -38,6 +38,7 @@ class SearchHeader extends Component {
               aria-label="Search"
               value={input}
               ref={(input) => (this.inputSearch = input)}
+
               // defaultValue={defaultUser}
             />
             <div className="input-group-append">
@@ -66,7 +67,7 @@ class SearchHeader extends Component {
                   </svg>
                 </button>
               )}
-              <button className="btn btn-outline-secondary" type="button" onClick={this.handleSubmit}>
+              <button className="btn btn-outline-secondary" type="button" onClick={this.handleSubmit} disabled={!input}>
                 <svg
                   width="1em"
                   height="1em"
