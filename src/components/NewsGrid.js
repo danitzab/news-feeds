@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Card } from './Card';
+import { CardNews } from './CardNews';
 
 const NewsGrid = ({ news, hasError, isLoading }) => {
   if (hasError) {
@@ -32,7 +32,7 @@ const NewsGrid = ({ news, hasError, isLoading }) => {
     <div className="card-deck justify-content-center">
       <div className="row">
         {news.map((element, i) => (
-          <Card {...element} key={i} />
+          <CardNews {...element} key={i} />
         ))}
       </div>
     </div>

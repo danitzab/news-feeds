@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Card = ({ img_url, title, category, url }) => {
+export const CardNews = ({ img_url, title, category, url }) => {
   return (
     <div className="col-sm-12 col-md-4 mb-4">
       <div className="card mt-4 h-100 mx-auto" style={{ width: '18rem' }}>
