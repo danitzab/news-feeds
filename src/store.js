@@ -1,6 +1,6 @@
-import { createStore, applyMiddleware } from "redux";
-import rootReducer from "./reducers";
-import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from 'redux';
+import rootReducer from './reducers';
+import thunk from 'redux-thunk';
 
 // utilidad para ver las acciones realizadas
 const logger = (store) => (next) => (action) => {
@@ -14,7 +14,6 @@ const logger = (store) => (next) => (action) => {
   return result;
 };
 
-const storeFactory = () =>
-  createStore(rootReducer, applyMiddleware(logger, thunk));
+const storeFactory = () => createStore(rootReducer, applyMiddleware(logger, thunk));
 
 export default storeFactory;
