@@ -18,7 +18,6 @@ export const clearNews = () => ({
 });
 
 export const getNewsBySearch = (word) => {
-  console.log('enter word', word);
   return (dispatch) => {
     initDispatch(dispatch);
 
@@ -29,6 +28,7 @@ export const getNewsBySearch = (word) => {
 export const getNewsByCategory = (category) => {
   return (dispatch) => {
     initDispatch(dispatch);
+
     dispatchService(dispatch, `https://api.canillitapp.com/news/category/${category}`);
   };
 };

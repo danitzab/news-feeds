@@ -10,7 +10,6 @@ class SearchHeader extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.onGet(this.inputSearch.value);
-    console.log('inputSearch', this.inputSearch);
   };
 
   handleInput = (e) => {
@@ -21,7 +20,6 @@ class SearchHeader extends Component {
   };
 
   handleCleaner = () => {
-    console.log('entro');
     this.setState({ input: '' });
   };
 

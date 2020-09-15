@@ -28,11 +28,10 @@ const Card = ({ news, hasError, isLoading }) => {
   }
 
   return (
-    <>
+    <div className="row">
       {news.map((report, i) => (
         <div className="col-sm-12 col-md-4 mb-4" key={i}>
-          <div className="card mt-4 h-100 mx-auto">
-            {/* <div className="card mt-4 h-100 mx-auto " style={{ width: '18rem' }}> */}
+          <div className="card mt-4 h-100 mx-auto" style={{ width: '18rem' }}>
             {report.img_url ? (
               <img src={report.img_url} className="card-img-top" alt={i} />
             ) : (
@@ -49,7 +48,7 @@ const Card = ({ news, hasError, isLoading }) => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

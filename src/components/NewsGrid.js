@@ -19,10 +19,10 @@ class NewsGrid extends Component {
   render() {
     return (
       <div className="card-deck justify-content-center">
-        <div className="row">
+        {/* <div className="row"> */}
           <Card />
         </div>
-      </div>
+      // </div>
     );
   }
 }

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div>
+    <>
       <nav className="navbar bg-primary text-white">
         <NavLink to="/">
           <h4 className="navbar-brand mt-2 pl" style={{ color: '#ffff' }}>
@@ -15,7 +15,7 @@ const Header = () => {
         <SearchHeader />
       </nav>
       <Menu />
-    </div>
+    </>
   );
 };
 
