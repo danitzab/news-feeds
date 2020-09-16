@@ -8,6 +8,7 @@ class Pagination extends Component {
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
       pageNumbers.push(i);
     }
+
     return (
       <div>
         <nav aria-label="Page navigation example">

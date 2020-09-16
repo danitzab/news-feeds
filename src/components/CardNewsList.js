@@ -9,11 +9,7 @@ const CardNewsList = ({ img_url, title, category, url }) => {
             {img_url ? (
               <img className="card-img-top" src={img_url} alt={title} />
             ) : (
-              <img
-                src="https://media2.giphy.com/media/3zhxq2ttgN6rEw8SDx/giphy.gif"
-                className="card-img-top"
-                alt="img-not-found"
-              />
+              <img src="https://media2.giphy.com/media/3zhxq2ttgN6rEw8SDx/giphy.gif" className="card-img-top" alt="img-not-found" />
             )}
           </div>
           <div className="col-8">

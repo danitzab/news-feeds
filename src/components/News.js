@@ -25,10 +25,6 @@ class News extends Component {
   }
 }
 
-// const mapStateToProps = (state, ownProps) => ({
-//   defaultUser: ownProps.user,
-// });
-
 const mapDispatchToProps = (dispatch) => ({
   getNewsByCategory: (id) => dispatch(getNewsByCategory(id)),
   getNewsByDate: () => dispatch(getNewsByDate()),
