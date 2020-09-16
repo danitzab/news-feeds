@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //Componentes
 import Header from '../components/Header';
 import { Home } from '../pages/Home';
+import { Footer } from '../components/Footer';
+// import { Categories } from '../pages/Categories';
 
 export const AppRoutes = () => (
   <Router>
     <Header />
-    <div>
+    <div className="footer-higth">
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/category/:id" component={Home} />
@@ -30,5 +32,6 @@ export const AppRoutes = () => (
         />
       </Switch>
     </div>
+    <Footer />
   </Router>
 );

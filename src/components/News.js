@@ -19,19 +19,19 @@ class News extends Component {
   render() {
     return (
       <div>
-        <NewsGrid />
+        <NewsGrid id={this.props.id} />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  defaultUser: ownProps.user,
-});
+// const mapStateToProps = (state, ownProps) => ({
+//   defaultUser: ownProps.user,
+// });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch) => ({
   getNewsByCategory: (id) => dispatch(getNewsByCategory(id)),
   getNewsByDate: () => dispatch(getNewsByDate()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(News);
+export default connect(null, mapDispatchToProps)(News);

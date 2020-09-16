@@ -94,14 +94,14 @@ class SearchHeader extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  defaultUser: ownProps.user,
-});
+// const mapStateToProps = (state, ownProps) => ({
+//   defaultUser: ownProps.user,
+// });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch) => ({
   onGet: (input) => dispatch(getNewsBySearch(input)),
   onClear: () => dispatch(clearNews()),
   getNewsByDate: () => dispatch(getNewsByDate()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchHeader);
+export default connect(null, mapDispatchToProps)(SearchHeader);

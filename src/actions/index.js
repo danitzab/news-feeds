@@ -67,7 +67,7 @@ const dispatchService = (dispatch, endpoint) => {
       if (!data || !data.length) {
         throw Error(data.statusText);
       } else {
-        dispatch(loadingSuccess(data.slice(0, 10)));
+        dispatch(loadingSuccess(data.slice(0, 100)));
       }
     })
     .catch(() => dispatch(loadingError(true)));
